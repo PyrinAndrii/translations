@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-md navbar-light bg-white">
+  <a class="navbar-brand" href="home">Translations</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+      <%= link_to 'Home', static_pages_home_path, class: 'nav-item nav-link' %>
+      <%= link_to 'About', static_pages_about_path, class: 'nav-item nav-link' %>
+      <%= link_to 'Services', static_pages_services_path, class: 'nav-item nav-link' %>
+      <%= link_to 'Blog', static_pages_home_path, class: 'nav-item nav-link' %>
+      <%= link_to 'Contacts', static_pages_contacts_path, class: 'nav-item nav-link' %>
+    </div>
+    <a class="btn btn-outline-primary ml-md-4" href="#">Sign up</a>
+  </div>
+</nav>
