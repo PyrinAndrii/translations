@@ -1,2 +1,215 @@
-<h1>StaticPages#services <%= icon('fas', 'language') %></h1>
-<p>Find me in app/views/static_pages/services.html.erb</p>
+<!-- Title -->
+<header class="mt-78">
+  <div class="jumbotron jumbotron-fluid" id="title-about-page">
+    <div class="container text-center">
+      <h1 class="display-4">Our Services</h1>
+      <p class="lead">We create the best translations for you.</p>
+    </div>
+  </div>
+</header>
+<!-- Experience -->
+<section class="pd-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 mb-3">
+        <%= image_tag "image-23.jpg", class: "img-fluid mb-3" %>
+      </div>
+      <div class="col-md-7 my-auto">
+        <p class="text-primary">Proven Experience</p>
+        <h2>Transforming the World of Professional Translation</h2>
+        <p class="lead mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquat enim ad minim veniam, quis nostrud exercitatio.</p>
+        <%= link_to 'Learn More', static_pages_services_path, class: 'btn btn-primary btn-lg xs-btn-block' %>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Services -->
+<section class="pd-section bg-services">
+  <div class="container-fluid">
+    <h2 class="text-center text-light"><span class="font-weight-bold">We Offer a Wide Range</span>
+of Translation Services</h2>
+    <div class="row text-services">
+      <div class="col-md-6">
+        <p class="lead"><span class="font-weight-bold">Translations</span> is a translation company that has been providing high quality, professional translation services for over 15 years. Check out our client list and read some client testimonials. Many customers feel that <span class="font-weight-bold">Translations</span> is the best translation company for their requirements.</p>
+      </div>
+      <div class="col-md-6">
+        <p class="lead"><span class="font-weight-bold">Translations</span> stands for Global Translation Services. We have earned our name by being an international translation agency with global reach. With translators in over 100 countries and support of over 60 languages, we have the language expertise you need in every part of the world.</p>
+      </div>
+    </div>
+
+    <div class="row mt-5 text-center">
+    <!-- Documents Translation -->
+      <div class="col-md-3">
+        <div class="card mb-5 mb-lg-0">
+          <div class="card-header card-blue">Documents Translation</div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">letter translations</li>
+              <li class="list-group-item">commercial documents translations</li>
+              <li class="list-group-item">marketing materials translations</li>
+              <li class="list-group-item">legal documents translations</li>
+            </ul>
+
+            <%= link_to(static_pages_services_path) do %>
+              <%= icon('far', 'plus-square fa-2x', class: 'card-plus-icon') %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <!-- Apostile & Legalization -->
+      <div class="col-md-3">
+        <div class="card mt-5 mb-5 mb-lg-0">
+          <div class="card-header card-green">Apostile & Legalization</div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">authentication of documents</li>
+              <li class="list-group-item">certify the signature identify the seal</li>
+              <li class="list-group-item">involves several entities legalization</li>
+              <li class="list-group-item">higher government authority</li>
+            </ul>
+
+            <%= link_to(static_pages_services_path) do %>
+              <%= icon('far', 'plus-square fa-2x', class: 'card-plus-icon') %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <!-- Localization Services -->
+      <div class="col-md-3">
+        <div class="card mb-5 mb-lg-0">
+          <div class="card-header card-blue">Localization Services</div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">penetrate foreign markets</li>
+              <li class="list-group-item">reach new clients or consumer groups</li>
+              <li class="list-group-item">increase international salesgain a competitive</li>
+              <li class="list-group-item">advantage overregional rivals</li>
+            </ul>
+            <%= link_to(static_pages_services_path) do %>
+              <%= icon('far', 'plus-square fa-2x', class: 'card-plus-icon') %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <!-- Website Translation -->
+      <div class="col-md-3">
+        <div class="card mt-5 mb-5 mb-lg-0">
+          <div class="card-header card-green">Website Translation</div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">software applications</li>
+              <li class="list-group-item">html, Ruby, javascript and flash files</li>
+              <li class="list-group-item">open source and proprietary CMS systems</li>
+              <li class="list-group-item">multimedia files</li>
+            </ul>
+
+            <%= link_to(static_pages_services_path) do %>
+              <%= icon('far', 'plus-square fa-2x', class: 'card-plus-icon') %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Information -->
+<section class="pd-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <%= image_tag "image-24.jpg", class: "img-fluid mb-5" %>
+      </div>
+
+      <div class="col-md-7 my-auto">
+        <p class="text-primary">Some Information</p>
+        <h2><span class="text-primary">Enjoy All The Services We Offer</h2>
+        <p class="lead mb-5">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquat enim ad minim veniam, quis nostrud exercitatio.
+        </p>
+        <div class="row">
+          <div class="col-md-4 mb-5">
+            <div class="text-center px-lg-3">
+              <%= icon('fas', 'user fa-3x', class: 'mb-4 text-success') %>
+              <h3 class="h5">Personal Translation</h3>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-5">
+            <div class="text-center px-lg-3">
+              <%= icon('fas', 'chalkboard-teacher fa-3x', class: 'mb-4 text-danger') %>
+              <h3 class="h5">Additional Services</h3>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-5">
+            <div class="text-center px-lg-3">
+              <%= icon('fas', 'map-marked-alt fa-3x', class: 'mb-4 text-primary') %>
+              <h3 class="h5">Localization Services</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Form -->
+<section class="pd-section bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form class="card p-5 mb-5">
+          <h2 class="text-center">Get a Quote</h2>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <input type="text" class="form-control form-control-lg" placeholder="Name">
+            </div>
+            <div class="form-group col-md-6">
+              <input type="number" class="form-control form-control-lg" placeholder="Phone">
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control form-control-lg" placeholder="Email">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="exampleFormControlSelect1">Sourse Language</label>
+              <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+                <option>Ukrainian</option>
+                <option>English</option>
+                <option>German</option>
+                <option>French</option>
+                <option>Spanish</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="exampleFormControlSelect1">Target Language</label>
+              <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+                <option>English</option>
+                <option>Spanish</option>
+                <option>French</option>
+                <option>German</option>
+                <option>Ukrainian</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlFile1">Example file input</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control form-control-lg" rows="3" placeholder="Notes"></textarea>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">
+                I agree that my submitted data is being collected and stored.
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-lg xs-btn-block btn-success">Submit order</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
