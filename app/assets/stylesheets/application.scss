@@ -10,6 +10,18 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
-    @import "bootstrap";
  *= require_self
  */
+ @import "bootstrap";
+
+ body {
+  /* Підключаємо шрифт 'Exo 2' з Google Fonts */
+  font-family: 'Exo 2', sans-serif;
+  /* Розмір шрифту 20px */
+  font-size: 20px;
+}
+
+ p {
+        font-family: 'Caveat', cursive;
+        font-size: 24px;
+    }
