@@ -1,2 +1,71 @@
-<h1>StaticPages#contacts <%= icon('fas', 'phone') %></h1>
-<p>Find me in app/views/static_pages/contacts.html.erb</p>
+<!-- Title -->
+<header class="mt-78">
+  <div class="jumbotron jumbotron-fluid" id="title-about-page">
+    <div class="container text-center">
+      <h1 class="display-4">Contacts</h1>
+      <p class="lead">We'd love to talk about how we can help you.</p>
+    </div>
+  </div>
+</header>
+<!-- Contact info -->
+<section class="pd-15">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="text-center px-lg-3">
+          <%= icon('fas', 'map-marker-alt fa-3x', class: 'mb-3 text-primary') %>
+          <h3 class="h4">Address</h3>
+          <p>8500, Lorem Street, Chicago, IL, 55030</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="text-center px-lg-3">
+          <%= icon('far', 'envelope fa-3x', class: 'mb-3 text-primary') %>
+          <h3 class="h4">Email</h3>
+          <p>info@example.com</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="text-center px-lg-3">
+          <%= icon('fas', 'mobile-alt fa-3x', class: 'mb-3 text-primary') %>
+          <h3 class="h4">Phone</h3>
+          <p>(123) 456 457 876</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Map -->
+<section>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2588.415796706812!2d25.592729506521355!3d49.552177274870864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc654340b9c900754!2sProfi-Tsentr!5e0!3m2!1sen!2sua!4v1552332621582" height="600" class="embed-responsive" frameborder="0" style="border:0" allowfullscreen></iframe>
+</section>
+<!-- Message -->
+<section class="pd-section bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <form class="card p-5">
+          <p class="text-center text-primary h1">Send a Message</p>
+          <p class="lead text-center mb-5">Whether you have questions or you would just like to say hello,<br> contact us</p>
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <input type="text" class="form-control form-control-lg" placeholder="Full Name">
+            </div>
+            <div class="col-md-4 mb-4">
+              <input type="email" class="form-control form-control-lg" placeholder="Email Address">
+            </div>
+            <div class="col-md-4 mb-4">
+              <input type="number" class="form-control form-control-lg" placeholder="Phone Number">
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control form-control-lg" rows="4" placeholder="Your Message"></textarea>
+          </div>
+          <div class="form-group text-center mt-3 mb-0">
+            <button type="submit" class="btn btn-lg btn-primary mb-2">Confirm identity</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
