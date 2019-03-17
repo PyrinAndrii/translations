@@ -29,3 +29,9 @@
         font-family: 'Caveat', cursive;
         font-size: 24px;
     }
+
+    /* Navbar */
+    .navbar {padding-top: 1rem; padding-bottom: 1rem;}
+    .navbar-light .navbar-nav .nav-link {color: rgba(0, 0, 0, 0.7);}
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link:focus {color: rgba(0, 0, 0, 1); text-decoration: underline;}
