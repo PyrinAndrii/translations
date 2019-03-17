@@ -294,3 +294,96 @@ of Translation Services</h2>
 
   </div>
 </section>
+
+<!-- Form -->
+<section class="pd-section bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <form class="card p-5 mb-5">
+          <h2 class="text-center">Get a Quote</h2>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <input type="text" class="form-control form-control-lg" placeholder="Name">
+            </div>
+            <div class="form-group col-md-6">
+              <input type="number" class="form-control form-control-lg" placeholder="Phone">
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control form-control-lg" placeholder="Email">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="exampleFormControlSelect1">Sourse Language</label>
+              <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+                <option>Ukrainian</option>
+                <option>English</option>
+                <option>German</option>
+                <option>French</option>
+                <option>Spanish</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="exampleFormControlSelect1">Target Language</label>
+              <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+                <option>English</option>
+                <option>Spanish</option>
+                <option>French</option>
+                <option>German</option>
+                <option>Ukrainian</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlFile1">Example file input</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control form-control-lg" rows="3" placeholder="Notes"></textarea>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">
+                I agree that my submitted data is being collected and stored.
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-lg xs-btn-block btn-success">Submit order</button>
+        </form>
+      </div>
+
+      <div class="col-md-6 my-auto">
+        <p class="text-primary">Why choose us</p>
+        <h2>We Offer <span class="font-weight-bold">Certified Translation</span></h2>
+        <p class="lead mb-5">
+          As a language evolves, texts in an earlier version of the language—original texts, or old translations—may become difficult for modern readers to understand. Such a text may be translated
+        </p>
+        <div class="row">
+          <div class="col-md-4 mb-5">
+            <div class="text-center px-lg-3">
+              <%= icon('fas', 'hand-holding-usd fa-3x', class: 'mb-4 text-success') %>
+              <h3 class="h5">Competitive Prices</h3>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-5">
+            <div class="text-center px-lg-3">
+              <%= icon('fas', 'shipping-fast fa-3x', class: 'mb-4 text-danger') %>
+              <h3 class="h5">Famously Fast</h3>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-5">
+            <div class="text-center px-lg-3">
+              <%= icon('fas', 'atlas fa-3x', class: 'mb-4 text-primary') %>
+              <h3 class="h5">Certified Translation</h3>
+            </div>
+          </div>
+        </div>
+        <p class="mt-5"><%= link_to 'Learn More', static_pages_about_path, class: 'btn btn-primary btn-lg xs-btn-block' %></p>
+      </div>
+    </div>
+  </div>
+</section>
