@@ -49,7 +49,7 @@ h2 {margin-bottom: 2rem;}
     /* Social icons */
     .soc-icon {color: #a2afcb; padding: 1.5rem; cursor: pointer;}
     .soc-icon:hover {color: #f2f2f2;}
-    
+
     /* Cards */
 .card-header {padding: 1.8em 3.4em; font-size: 1.4rem;}
 .card-blue {background-color: #377dff; color: #EBF2FF;}
@@ -69,10 +69,29 @@ h2 {margin-bottom: 2rem;}
 .rounded-circle {border-radius: 50% !important;}
 .btn-icon__inner {position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
 
+/* About Title */
+#title-about-page {color: #EBF9F6;
+  background-image: url("main_header_bg.jpg") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+/* About Call-to-action */
+#block-action {height: 100vh; color: #EBF9F6;
+  background-image: url("call-to-action.jpg") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+#block-action .display-4 {font-size: 3.5rem; letter-spacing: 0.5px;}
+#block-action .lead {font-size: 2rem; margin-bottom: 2rem;}
+
 /* Media Query */
 @media (max-width: 575.98px) {
   body {font-size: 16px;}
   .pd-section {padding: 50px 0;}
   .p-5 {padding: 1.5rem !important;}
   .xs-btn-block {width: 100%;}
+  #block-action .display-4 {font-size: 2rem;}
+  #block-action .lead {font-size: 1.3rem; margin-bottom: 1rem;}
 }
