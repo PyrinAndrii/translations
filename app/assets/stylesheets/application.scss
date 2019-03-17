@@ -23,7 +23,11 @@
   font-family: 'Exo 2', sans-serif;
   /* Розмір шрифту 20px */
   font-size: 20px;
+  word-wrap: break-word;
+  hyphens: auto;
 }
+
+h2 {margin-bottom: 2rem;}
 
  p {
         font-family: 'Caveat', cursive;
@@ -45,3 +49,30 @@
     /* Social icons */
     .soc-icon {color: #a2afcb; padding: 1.5rem; cursor: pointer;}
     .soc-icon:hover {color: #f2f2f2;}
+    
+    /* Cards */
+.card-header {padding: 1.8em 3.4em; font-size: 1.4rem;}
+.card-blue {background-color: #377dff; color: #EBF2FF;}
+.card-green {background-color: #00c9a7; color: #EBF9F6;}
+.card-red {background-color: #DE4537; color: #EBF9F6;}
+.card-plus-icon {color: #ccc; margin: 1.5rem 0 1rem; transition: all 0.3s ease;}
+.card-plus-icon:hover {color: #333;}
+
+.bg-light-blue {background-color: #EBF2FF; color: #377dff;}
+#faqs .card .card-header {padding: 0.75rem 1.25rem; font-size: 1.5rem;}
+.card-btn {color: #1e2022; text-align: left;}
+.card:hover {border-color: rgba(55, 125, 255, 0.5); box-shadow: 0 0 35px rgba(55, 125, 255, 0.125);}
+.card .btn-link:hover {color: #0056b3; text-decoration: none;}
+/* How it works */
+.btn-icon {position: relative; line-height: 0; font-size: 2rem; width: 4.125rem; height: 4.125rem; padding: 0;}
+.btn-soft-primary {color: #377dff; background: rgba(55, 125, 255, 0.1); border-color: transparent;}
+.rounded-circle {border-radius: 50% !important;}
+.btn-icon__inner {position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
+
+/* Media Query */
+@media (max-width: 575.98px) {
+  body {font-size: 16px;}
+  .pd-section {padding: 50px 0;}
+  .p-5 {padding: 1.5rem !important;}
+  .xs-btn-block {width: 100%;}
+}
