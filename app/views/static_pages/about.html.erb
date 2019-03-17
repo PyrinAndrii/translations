@@ -1,2 +1,150 @@
-<h1>StaticPages#about <%= icon('fas', 'child') %></h1>
-<p>Find me in app/views/static_pages/about.html.erb</p>
+<!-- Title -->
+<header class="mt-78">
+  <div class="jumbotron jumbotron-fluid" id="title-about-page">
+  <div class="container text-center">
+    <h1 class="display-4">About us</h1>
+    <p class="lead">Your business needs a little push.</p>
+  </div>
+</div>
+</header>
+<!-- Promo -->
+<section class="pd-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 mb-3">
+        <%= image_tag "experience.jpg", class: "img-fluid", alt: "Order Professional Translations" %>
+      </div>
+      <div class="col-md-7 my-auto">
+        <p class="text-primary">Proven Experience</p>
+        <h2>Order <span class="font-weight-bold">Professional Translations</span> in Just a Few Clicks</h2>
+        <p class="lead mb-4">ProLingua is a professional translation company which offers exceptional language expertise services. We have experienced team, flexible prices, and international quality certification. </p>
+        <%= link_to 'Learn More', static_pages_services_path, class: 'btn btn-primary btn-lg xs-btn-block' %>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Call-to-action -->
+<section class="pd-section" id="block-action">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-5"></div>
+      <div class="col-md-7 my-auto">
+        <h2 class="display-4 mt-5"><span class="text-warning">Transforming</span> the World of<br> Professional Translation</h2>
+        <p class="lead">Interested, but in a hurry?</p>
+        <p><%= link_to 'Get Instant Quote', static_pages_services_path, class: 'btn btn-warning btn-lg xs-btn-block mt-5' %></p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- About us -->
+<section class="pd-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 my-auto">
+        <h2><span class="text-primary">What You Need</span> to Know About Us</h2>
+        <p class="lead mb-5">
+          In order for us to live up to our promise of an outstanding service, each job is assigned to linguists with specializations in various languages who work for our company on a full-time basis.
+        </p>
+        <div class="row">
+          <div class="col-md-4 mb-5">
+            <div class="text-center px-lg-3">
+              <%= icon('fas', 'atlas fa-3x', class: 'mb-4 text-success') %>
+              <h3 class="h1">80</h3>
+              <p>Languages</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-5">
+            <div class="text-center px-lg-3">
+              <%= icon('fas', 'clipboard-list fa-3x', class: 'mb-4 text-danger') %>
+              <h3 class="h1">100</h3>
+              <p>Translators</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-5">
+            <div class="text-center px-lg-3">
+              <%= icon('fas', 'users fa-3x', class: 'mb-4 text-primary') %>
+              <h3 class="h1">780</h3>
+              <p>Customers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <%= image_tag "about-bg-man.jpg", class: "img-fluid mb-5" %>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Price -->
+<section class="pd-section bg-light">
+  <div class="container">
+    <div class="row mt-5 text-center">
+    <!-- Standart -->
+      <div class="col-md-4">
+        <div class="card mt-5 mb-5 mb-lg-0">
+          <div class="card-header card-blue">
+            <p class="h2">$69<small>/doc</small></p>
+            <div class="text-warning text-uppercase small">Standart</div>
+          </div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">2-3 Business Days Turn around by email</li>
+              <li class="list-group-item">Regular Post Delivery</li>
+              <li class="list-group-item">1 Certified Hard Copy</li>
+              <li class="list-group-item">Accredited Professional Translation</li>
+            </ul>
+
+            <%= link_to(static_pages_services_path) do %>
+              <%= icon('far', 'plus-square fa-2x', class: 'card-plus-icon') %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <!-- Express -->
+      <div class="col-md-4">
+        <div class="card mb-5 mb-lg-0">
+          <div class="card-header card-green">
+            <p class="h2">$132<small>/doc</small></p>
+            <div class="text-warning text-uppercase small">Express</div>
+          </div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">24 Hour Turnaround by email</li>
+              <li class="list-group-item">Express Post Delivery</li>
+              <li class="list-group-item">1 Certified Hard Copy</li>
+              <li class="list-group-item">Accredited Professional Translation</li>
+            </ul>
+
+            <%= link_to(static_pages_services_path) do %>
+              <%= icon('far', 'plus-square fa-2x', class: 'card-plus-icon') %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <!-- Instant -->
+      <div class="col-md-4">
+        <div class="card mt-5 mb-5 mb-lg-0">
+          <div class="card-header card-red">
+            <p class="h2">$330<small>/doc</small></p>
+            <div class="text-warning text-uppercase small">Instant</div>
+          </div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">2 Hour Turnaround by email</li>
+              <li class="list-group-item">Express Post Delivery</li>
+              <li class="list-group-item">1 Certified Hard Copy</li>
+              <li class="list-group-item">Accredited Professional Translation</li>
+            </ul>
+            <%= link_to(static_pages_services_path) do %>
+              <%= icon('far', 'plus-square fa-2x', class: 'card-plus-icon') %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
