@@ -63,5 +63,8 @@ gem 'mini_magick', '~> 4.9', '>= 4.9.3'
 # Pagination
 gem 'kaminari'
 
+# WYSIWYG text editor
+gem 'ckeditor'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
