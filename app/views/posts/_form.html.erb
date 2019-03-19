@@ -25,7 +25,7 @@
 
   <div class="form-group">
     <label>Upload file</label>
-    <div class="mb-3"><%= image_tag(@post.image_url(:media)) %></div>
+    <div class="mb-3"><%= image_tag(@post.image_url(:media)) if @post.image? %></div>
     <p><label><%= form.check_box :remove_image if @post.image? %> Remove image</label></p>
     <%= form.file_field :image, class: 'form-control-file' %>
     <%= form.hidden_field :image_cache %>
