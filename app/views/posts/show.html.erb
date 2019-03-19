@@ -11,15 +11,15 @@
   </div>
 </header>
 
-<div class="container-fluid mb-5">
+<div class="container mb-5">
   <p id="notice"><%= notice %></p>
 
   <div class="row">
     <!-- Left column -->
     <div class="col-lg-8 mb-9 mb-lg-0">
       <%= image_tag(@post.image_url(:large), class: 'img-fluid rounded mb-5') if @post.image? %>
-
-      <div><%= @post.content %></div>
+      <!-- Add html_safe -->
+      <div><%= @post.content.html_safe %></div>
       <hr>
 
       <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-warning' %>

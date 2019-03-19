@@ -18,11 +18,11 @@
   <div class="form-group">
     <%= form.text_area :description, placeholder: 'Post Description', class: 'form-control form-control-lg' %>
   </div>
-
-  <div class="form-group">
-    <%= form.text_area :content, class: 'form-control form-control-lg' %>
-  </div>
-
+  <!-- Ckeditor -->
+   <div class="form-group">
+     <%= form.cktext_area :content, class: 'form-control form-control-lg' %>
+   </div>
+   <!-- End Ckeditor -->
   <div class="form-group">
     <label>Upload file</label>
     <div class="mb-3"><%= image_tag(@post.image_url(:media)) if @post.image? %></div>
