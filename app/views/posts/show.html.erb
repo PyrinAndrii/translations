@@ -17,3 +17,39 @@
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+
+<!-- Title -->
+<header class="mt-78">
+  <div class="jumbotron jumbotron-fluid" id="title-about-page">
+    <div class="container text-center">
+      <h1 class="display-4"><%= @post.title %></h1>
+      <p class="lead mt-5">Category | <%= @post.created_at.strftime("%B %d, %Y") %></p>
+    </div>
+  </div>
+</header>
+
+<div class="container-fluid mb-5">
+  <p id="notice"><%= notice %></p>
+
+  <div class="row">
+    <!-- Left column -->
+    <div class="col-lg-8 mb-9 mb-lg-0">
+      <%= image_tag(@post.image_url(:large), class: 'img-fluid rounded mb-5') if @post.image? %>
+
+      <div><%= @post.content %></div>
+      <hr>
+
+      <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-warning' %>
+      <%= link_to 'Back', posts_path, class: 'btn btn-secondary' %>
+      <%= link_to 'Destroy', @post, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+    <!-- End Left column -->
+
+    <!-- Right column -->
+    <div class="col-lg-4">
+      <%= render 'shared/right-column' %>
+    </div>
+    <!-- End Right column -->
+  </div>
+  <!-- End Row -->
+</div>
