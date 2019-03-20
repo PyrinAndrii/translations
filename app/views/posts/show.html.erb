@@ -27,6 +27,8 @@
       <div class="mb-5">
         <h2><%= @post.comments.count %> Comment</h2>
 
+        <%= render @post.comments %>
+
         <% @post.comments.each do |comment| %>
           <article class="bg-light p-5 border-bottom">
             <p>
