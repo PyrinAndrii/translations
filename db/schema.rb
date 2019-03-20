@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_19_225149) do
+ActiveRecord::Schema.define(version: 2019_03_20_223220) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(version: 2019_03_19_225149) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["type"], name: "index_ckeditor_assets_on_type"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string "name"
+    t.text "body"
+    t.bigint "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_comments_on_post_id"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -49,4 +58,5 @@ ActiveRecord::Schema.define(version: 2019_03_19_225149) do
     t.index ["slug"], name: "index_posts_on_slug", unique: true
   end
 
+  add_foreign_key "comments", "posts"
 end
