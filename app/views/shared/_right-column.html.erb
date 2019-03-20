@@ -17,6 +17,11 @@
   <hr class="mb-5 mt-5 border-top">
 
   <p class="h4 mb-4 text-warning">Tags</p>
+  <div class="text-uppercase">
+    <% @posts.each do |post| %>
+        <%= raw post.tags.map(&:name).map{ |t| link_to t, tag_path(t), class: 'btn btn-dark text-white mb-2' }.join(' ') %>
+    <% end %>
+  </div>
   <hr class="mb-5 mt-5 border-top">
 
   <p class="h4 mb-4 text-warning">Contacts</p>
