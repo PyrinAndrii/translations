@@ -28,28 +28,6 @@
         <h2><%= @post.comments.count %> Comment</h2>
 
         <%= render @post.comments %>
-
-        <% @post.comments.each do |comment| %>
-          <article class="bg-light p-5 border-bottom">
-            <p>
-              <strong>Author:</strong>
-              <%= comment.name %>
-            </p>
-
-            <p>
-              <strong>Comment:</strong>
-              <%= comment.body %>
-            </p>
-            <!-- Destroy comment -->
-              <p>
-                <%= link_to([comment.post, comment], method: :delete,
-                data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-danger') do %>
-                  <%= icon('fas', 'trash fa-1x') %> Comment
-                <% end %>
-              </p>
-              <!-- End Destroy comment -->
-          </article>
-        <% end %>
       </div>
       <hr>
       <!-- Form New Comments -->
@@ -57,7 +35,6 @@
         <h2>Leave a comment:</h2>
 
         <%= render 'comments/form' %>
-        <% end %>
       </div>
       <!-- End Form New Comments -->
     </div>
