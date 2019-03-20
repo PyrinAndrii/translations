@@ -1,0 +1,49 @@
+<!-- Title -->
+<header class="mt-78">
+  <div class="jumbotron jumbotron-fluid" id="title-about-page">
+    <div class="container text-center">
+      <h1 class="display-4">Tag: <%= @tag.name %></h1>
+
+      <p class="lead text-uppercase">
+        <%= link_to 'Home', static_pages_home_path, class: 'btn btn-link text-light' %> /
+        <%= link_to 'All Posts', posts_path, class: 'btn btn-link text-light' %> /
+        <a href="" class="btn btn-link text-light disabled">Tag: <%= @tag.name %></a>
+      </p>
+    </div>
+  </div>
+</header>
+
+<% if @tag.posts.empty?  %>
+  <h2>No Posts</h2>
+<% else %>
+  <div class="container-fluid mb-5">
+    <p id="notice"><%= notice %></p>
+
+  <!-- Add New Post -->
+    <%= link_to new_post_path, class: 'btn btn-success mb-3' do %>
+      <%= icon('fas', 'plus') %> New Post
+    <% end %>
+  <!-- End Add New Post -->
+    <hr>
+    <!-- Start row -->
+    <div class="row">
+      <!-- Left column -->
+      <div class="col-lg-8 mb-9 mb-lg-0">
+        <div class="row">
+        <!-- Start post card -->
+          <%= render @tag.posts %>
+        <!-- End post card -->
+        </div>
+      </div>
+      <!-- End Left column -->
+
+      <!-- Right column -->
+      <div class="col-lg-4">
+        <%= render 'shared/right-column' %>
+      </div>
+      <!-- End Right column -->
+    </div>
+    <!-- End row -->
+  </div>
+  <!-- End container -->
+<% end %>
