@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <!-- Title -->
 <header class="mt-78">
   <div class="jumbotron jumbotron-fluid" id="title-about-page">
@@ -12,32 +10,20 @@
 
 <div class="container-fluid mb-5">
   <p id="notice"><%= notice %></p>
-  <!-- Start row -->
-  <p><%= link_to 'New Post', new_post_path, class: 'btn btn-success' %></p>
+
+<!-- Add New Post -->
+  <%= link_to new_post_path, class: 'btn btn-success mb-3' do %>
+    <%= icon('fas', 'plus') %> New Post
+  <% end %>
+<!-- End Add New Post -->
   <hr>
+  <!-- Start row -->
   <div class="row">
     <!-- Left column -->
     <div class="col-lg-8 mb-9 mb-lg-0">
       <div class="row">
       <!-- Start post card -->
-        <% @posts.each do |post| %>
-          <article class="card col-md-6 border-0 p-0">
-            <div class="card-body mb-4">
-              <div class="mb-4">
-                <%= link_to post do %>
-                  <%= image_tag(post.image_url(:thumb), class: 'img-fluid rounded') if post.image? %>
-                <% end %>
-              </div>
-              <small class="d-block text-secondary mb-2">
-                <%= post.created_at.strftime("%B %d, %Y") %>
-              </small>
-              <h2 class="h3 mb-4">
-                <%= link_to post.title, post %>
-              </h2>
-              <p><%= post.description %></p>
-            </div>
-          </article>
-        <% end %>
+        <%= render @posts %>
       <!-- End post card -->
       </div>
       <!-- Pagination 8 align center -->
