@@ -11,7 +11,50 @@
     </div>
   <% end %>
 
+  <div class="form-group<%= form_with(model: post, local: true) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <div class="form-group">
+    <%= form.text_field :title, placeholder: 'Post Title', class: 'form-control form-control-lg' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.text_area :description, placeholder: 'Post Description', class: 'form-control form-control-lg' %>
+  </div>
+  <!-- tinymce -->
+  <div class="form-group">
+    <%= form.text_area :content, class: 'tinymce', rows: 20 %>
+    <%= tinymce %>
+  </div>
+  <!-- End tinymce -->
+  <!-- Add tags -->
+  <div class="form-group">
+    <p>Add tags</p>
+    <%= form.text_field :all_tags, placeholder: 'Tags separated with comma', class: 'form-control form-control-lg' %>
+  </div>
+  <!-- End Add Tags -->
+  <!-- Add photo -->
+  <div class="form-group mb-5">
+    <label>Upload photo</label>
+    <p><%= image_tag(@post.image_url(:media)) if @post.image? %></p>
+    <%= form.file_field :image, class: 'form-control-file' %>
+    <%= form.hidden_field :image_cache %>
+  </div>
+  <!-- End Add photo -->
+  <%= form.submit class: 'btn btn-lg btn-primary mb-5' %>
+
+<% end %>
+">
     <%= form.text_field :title, placeholder: 'Post Title', class: 'form-control form-control-lg' %>
   </div>
 
